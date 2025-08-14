@@ -20,7 +20,7 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
-import { h2, p, section, span } from 'framer-motion/client';
+import { h2, li, p, section, span } from 'framer-motion/client';
 
 const Section: React.FC<{
 	id?: string;
@@ -156,6 +156,73 @@ const Hero: React.FC = () => (
 	</section>
 );
 
+const services = [
+	{
+		icon: <Laptop className='w-5 h-5' />,
+		title: 'Custom Development',
+		desc: 'Modern web apps and blazing-fast sites built with secure, scalable architectures.',
+		bullets: ['React/Next.js', 'TypeScript APIs', 'Auth & RBAC'],
+	},
+	{
+		icon: <Search className='w-5 h-5' />,
+		title: 'Technical SEO',
+		desc: 'From crawl health and Core Web Vitals to schema and content strategy.',
+		bullets: ['CWV & performance', 'Schema & sitemaps', 'Content playbooks'],
+	},
+	{
+		icon: <Paintbrush className='w-5 h-5' />,
+		title: 'Brand & UI Design',
+		desc: 'Clean, conversion-focused interfaces with accessible design systems.',
+		bullets: ['Design tokens', 'Component libraries', 'UX research'],
+	},
+	{
+		icon: <Bot className='w-5 h-5' />,
+		title: 'AI Automation',
+		desc: 'Agents that generate, evaluate, and distribute-under your guardrails.',
+		bullets: ['Content agents', 'Ops & CRM bots', 'Analytics & alerts'],
+	},
+];
+
+const Services: React.FC = () => (
+	<Section
+		id='services'
+		eyebrow='What we do'
+		title={
+			<>
+				Development, SEO, Design-
+				<span className='text-indigo-600'>power-boosted by AI</span>
+			</>
+		}
+		subtitle='We combine engineering rigor with creative strategy to build durable growth systems.'
+	>
+		<div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
+			{services.map((s) => (
+				<Card key={s.title} className='rounded-3xl shadow-sm h-full'>
+					<CardHeader>
+						<div className='flex items-center gap-3'>
+							<div className='p-2 rounded-xl bg-indigo-50 text-indigo-600'>
+								{s.icon}
+							</div>
+							<CardTitle className='text-lg'>{s.title}</CardTitle>
+						</div>
+					</CardHeader>
+					<CardContent className='text-zinc-600 text-sm space-y-4'>
+						<p>{s.desc}</p>
+						<ul className='space-y-2'>
+							{s.bullets.map((b) => (
+								<li key={b} className='flex items-center gap-2'>
+									<CheckCircle2 className='w-4 h-4 text-emerald-500' />
+									{b}
+								</li>
+							))}
+						</ul>
+					</CardContent>
+				</Card>
+			))}
+		</div>
+	</Section>
+);
+
 export default function Page() {
 	return (
 		<div className='min-h-screen bg-white text-zinc-900'>
@@ -173,6 +240,7 @@ export default function Page() {
 					</div>
 				</div>
 			</div>
+			<Services />
 			<footer className='border-t border-zinc-200 py-10'>
 				<div className='container mx-auto px-6 max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-zinc-600'>
 					<div className='flex items-center gap-3'>
