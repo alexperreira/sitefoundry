@@ -338,6 +338,37 @@ const Features: React.FC = () => (
 	</Section>
 );
 
+const Work: React.FC = () => (
+	<Section
+		id='work'
+		eyebrow='Selected work'
+		title='Outcomes over outputs'
+		subtitle='Here are representative project types and results. Swap in your case studies when ready.'
+	>
+		<div className='grid md:grid-cols-3 gap-6'>
+			{[1, 2, 3].map((i) => (
+				<Card key={i} className='rounded-3xl overflow-hidden group'>
+					<div className='h-40 bg-gradient-to-br from-indigo-200 via-sky-200 to-emerald-200' />
+					<CardHeader className='pb-2'>
+						<CardTitle>Project headline {i}</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<p>
+							Brief outcome statement describing traffic, conversion, or time
+							saved.
+						</p>
+						<ul className='space-y-1 list-disc pl-5'>
+							<li>+120% organic traffic in 4 months</li>
+							<li>24s → 2s LCP, +14% CR</li>
+							<li>Hours/week saved via agents</li>
+						</ul>
+					</CardContent>
+				</Card>
+			))}
+		</div>
+	</Section>
+);
+
 export default function Page() {
 	return (
 		<div className='min-h-screen bg-white text-zinc-900'>
@@ -358,6 +389,7 @@ export default function Page() {
 			<Services />
 			<Process />
 			<Features />
+			<Work />
 			<footer className='border-t border-zinc-200 py-10'>
 				<div className='container mx-auto px-6 max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-zinc-600'>
 					<div className='flex items-center gap-3'>
