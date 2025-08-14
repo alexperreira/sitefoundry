@@ -178,7 +178,7 @@ const services = [
 	{
 		icon: <Bot className='w-5 h-5' />,
 		title: 'AI Automation',
-		desc: 'Agents that generate, evaluate, and distribute-under your guardrails.',
+		desc: 'Agents that generate, evaluate, and distribute—under your guardrails.',
 		bullets: ['Content agents', 'Ops & CRM bots', 'Analytics & alerts'],
 	},
 ] as const;
@@ -246,7 +246,7 @@ const process = [
 	},
 	{
 		icon: <LineChart className='w-5 h-5' />,
-		title: 'Automate',
+		title: 'Grow',
 		body: 'Measure, iterate, and scale channels that move your KPIs.',
 	},
 ] as const;
@@ -278,6 +278,66 @@ const Process: React.FC = () => (
 	</Section>
 );
 
+const features = [
+	{
+		title: 'Content engine',
+		body: 'Research → draft → fact-check → publish with approvals and style checks.',
+		bullets: [
+			'Briefs from keyword clusters',
+			'Schema & internal linking',
+			'Auto-A/B titles & CTAs',
+		],
+	},
+	{
+		title: 'Ops & CRM bots',
+		body: 'Connect forms, CRMs, help desks, and analytics to cut manual work.',
+		bullets: [
+			'Lead enrichment & routing',
+			'Lifecycle emails & summaries',
+			'Weekly KPI snapshots',
+		],
+	},
+	{
+		title: 'Performance & security',
+		body: 'Core Web Vitals, access controls, and observability baked-in from day one.',
+		bullets: [
+			'CSP/Headers & rate limits',
+			'Edge caching & image optimizations',
+			'Error tracking & SLOs',
+		],
+	},
+] as const;
+
+const Features: React.FC = () => (
+	<Section
+		id='features'
+		eyebrow='AI, responsibly'
+		title='Agents with guardrails, not gimmicks'
+		subtitle='Our automations are observable, reversible, and aligned to your KPIs—so you stay in control.'
+	>
+		<div className='grid lg:grid-cols-3 gap-6'>
+			{features.map((feat) => (
+				<Card key={feat.title} className='rounded-3xl'>
+					<CardHeader>
+						<CardTitle>{feat.title}</CardTitle>
+					</CardHeader>
+					<CardContent className='text-sm text-zinc-600 space-y-3'>
+						<p>{feat.body}</p>
+						<ul className='space-y-2'>
+							{feat.bullets.map((b) => (
+								<li key={b} className='flex items-center gap-2'>
+									<CheckCircle2 className='w-4 h-4 text-emerald-500' />
+									{b}
+								</li>
+							))}
+						</ul>
+					</CardContent>
+				</Card>
+			))}
+		</div>
+	</Section>
+);
+
 export default function Page() {
 	return (
 		<div className='min-h-screen bg-white text-zinc-900'>
@@ -297,6 +357,7 @@ export default function Page() {
 			</div>
 			<Services />
 			<Process />
+			<Features />
 			<footer className='border-t border-zinc-200 py-10'>
 				<div className='container mx-auto px-6 max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-zinc-600'>
 					<div className='flex items-center gap-3'>
