@@ -161,7 +161,7 @@ const services = [
 		icon: <Laptop className='w-5 h-5' />,
 		title: 'Custom Development',
 		desc: 'Modern web apps and blazing-fast sites built with secure, scalable architectures.',
-		bullets: ['React/Next.js', 'TypeScript APIs', 'Auth & RBAC'],
+		bullets: ['React/Next.js/Sveltekit', 'TypeScript APIs', 'Auth & RBAC'],
 	},
 	{
 		icon: <Search className='w-5 h-5' />,
@@ -459,6 +459,40 @@ const Pricing: React.FC = () => (
 	</Section>
 );
 
+const faqs = [
+	{
+		q: 'How do you use AI without risking our brand?',
+		a: 'We use human‑in‑the‑loop checks, style guides, and approvals. Agents are sandboxed, observable, and revertible.',
+	},
+	{
+		q: 'What stacks do you build with?',
+		a: 'Next.js/React/Sveltekit frontends, TypeScript backends, Supabase/Prisma or Firebase, plus modern CI/CD and edge caching.',
+	},
+	{
+		q: 'Do you migrate from WordPress?',
+		a: 'Yes. We often preserve URLs and SEO equity while moving to faster, simpler stacks.',
+	},
+	{
+		q: 'Can you work with our in‑house team?',
+		a: 'Absolutely. We can own a stream or embed with your engineers, designers, and marketers.',
+	},
+] as const;
+
+const FAQ: React.FC = () => (
+	<Section id='faq' eyebrow='Questions' title='FAQ'>
+		<div className='grid md:grid-cols-2 gap-6'>
+			{faqs.map((f) => (
+				<Card key={f.q} className='rounded-3xl'>
+					<CardHeader>
+						<CardTitle className='text-lg'>{f.q}</CardTitle>
+					</CardHeader>
+					<CardContent className='text-md text-zinc-600'>{f.a}</CardContent>
+				</Card>
+			))}
+		</div>
+	</Section>
+);
+
 export default function Page() {
 	return (
 		<div className='min-h-screen bg-white text-zinc-900'>
@@ -481,6 +515,7 @@ export default function Page() {
 			<Features />
 			<Work />
 			<Pricing />
+			<FAQ />
 			<footer className='border-t border-zinc-200 py-10'>
 				<div className='container mx-auto px-6 max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-zinc-600'>
 					<div className='flex items-center gap-3'>
