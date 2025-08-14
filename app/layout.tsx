@@ -1,4 +1,8 @@
-export const metadata = {
+import React from 'react';
+import '../styles/globals.css';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
 	metadataBase: new URL('https://sitefoundry.ai'),
 	title: {
 		default: 'SiteFoundry.ai - Build. Rank. Automate. Grow.',
@@ -20,10 +24,6 @@ export const metadata = {
 	},
 	robots: { index: true, follow: true },
 };
-
-// import type { Metadata } from 'next';
-import React from 'react';
-import '../styles/globals.css';
 
 export default function RootLayout({
 	children,
