@@ -1,9 +1,10 @@
 'use client';
+import Navbar from '@/components/Navbar';
 
 export default function Page() {
 	return (
 		<div className='min-h-screen bg-white text-zinc-900'>
-			{/* <Navbar /> */}
+			<Navbar />
 			{/* <Hero /> */}
 			<div className='py-10 md:py-14 border-y border-zinc-100 bg-white/60 backdrop-blur'>
 				<div className='container mx-auto px-6 max-w-7xl'>
