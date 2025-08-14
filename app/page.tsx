@@ -181,7 +181,7 @@ const services = [
 		desc: 'Agents that generate, evaluate, and distribute-under your guardrails.',
 		bullets: ['Content agents', 'Ops & CRM bots', 'Analytics & alerts'],
 	},
-];
+] as const;
 
 const Services: React.FC = () => (
 	<Section
@@ -223,6 +223,61 @@ const Services: React.FC = () => (
 	</Section>
 );
 
+const process = [
+	{
+		icon: <Rocket className='w-5 h-5' />,
+		title: 'Discover',
+		body: 'We map goals, audiences, and technical constraints-then set KPIs.',
+	},
+	{
+		icon: <Paintbrush className='w-5 h-5' />,
+		title: 'Design',
+		body: 'Wireframes → components → design tokens for speed and consistency.',
+	},
+	{
+		icon: <Laptop className='w-5 h-5' />,
+		title: 'Build',
+		body: 'Type-safe APIs, secure auth, and fast frontends tuned for CWV.',
+	},
+	{
+		icon: <Bot className='w-5 h-5' />,
+		title: 'Automate',
+		body: 'Agents schedule content, update data, and generate reports.',
+	},
+	{
+		icon: <LineChart className='w-5 h-5' />,
+		title: 'Automate',
+		body: 'Measure, iterate, and scale channels that move your KPIs.',
+	},
+] as const;
+
+const Process: React.FC = () => (
+	<Section
+		id='process'
+		eyebrow='How it works'
+		title='A focused, measurable delivery loop'
+		subtitle='Every engagement ships a working system fast, then compounds gains with automation and iteration.'
+	>
+		<div className='grid md:grid-cols-5 gap-4'>
+			{process.map((step) => (
+				<Card key={step.title} className='rounded-3xl h-full'>
+					<CardHeader>
+						<div className='flex items-center gap-3'>
+							<div className='p-2 rounded-xl bg-emerald-50 text-emerald-600'>
+								{step.icon}
+							</div>
+							<CardTitle className='text-base'>{step.title}</CardTitle>
+						</div>
+					</CardHeader>
+					<CardContent className='text-sm text-zinc-600'>
+						{step.body}
+					</CardContent>
+				</Card>
+			))}
+		</div>
+	</Section>
+);
+
 export default function Page() {
 	return (
 		<div className='min-h-screen bg-white text-zinc-900'>
@@ -241,6 +296,7 @@ export default function Page() {
 				</div>
 			</div>
 			<Services />
+			<Process />
 			<footer className='border-t border-zinc-200 py-10'>
 				<div className='container mx-auto px-6 max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-zinc-600'>
 					<div className='flex items-center gap-3'>
