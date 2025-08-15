@@ -22,35 +22,7 @@ import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
 import { h2, li, p, section, span } from 'framer-motion/client';
 
-const Section: React.FC<{
-	id?: string;
-	eyebrow?: string;
-	title?: React.ReactNode;
-	subtitle?: React.ReactNode;
-	children?: React.ReactNode;
-}> = ({ id, eyebrow, title, subtitle, children }) => (
-	<section id={id} className='relative py-20 md:py-28'>
-		<div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/5 pointer-events-none' />
-		<div className='container mx-auto px-6 max-w-7xl'>
-			<div className='mb-10 md:mb-14 text-center'>
-				{eyebrow && (
-					<span className='inline-block text-xs tracking-widest uppercase text-indigo-600/90 font-semibold'>
-						{eyebrow}
-					</span>
-				)}
-				{title && (
-					<h2 className='mt-3 text-3xl md:text-5xl font-bold tracking-tight'>
-						{title}
-					</h2>
-				)}
-				{subtitle && (
-					<p className='mt-4 text-zinc-600 max-w-2xl mx-auto'>{subtitle}</p>
-				)}
-			</div>
-			{children}
-		</div>
-	</section>
-);
+
 
 const Hero: React.FC = () => (
 	<section id='home' className='relative overflow-hidden'>
