@@ -25,11 +25,16 @@ export const metadata: Metadata = {
 	robots: { index: true, follow: true },
 };
 
+const themeInit = `(() => { try { const d = document.documentElement; const s = localStorage.getItem('sf-theme'); const m = window.matchMedia('(prefers-color-scheme: dark)').matches; const dark = s ? s === 'dark' : m; d.classList.toggle('dark', dark); } catch (_) {} })();`;
+
 export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang='en' className='scroll-smooth'>
+		<html lang='en' className='scroll-smooth' suppressHydrationWarning>
+			<head>
+				<script dangerouslySetInnerHTML={{ __html: themeInit }} />
+			</head>
 			<body className='min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased'>
 				{children}
 			</body>
