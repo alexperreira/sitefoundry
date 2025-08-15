@@ -30,7 +30,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang='en' className='scroll-smooth'>
-			<body className='min-h-screen bg-white text-zinc-900 antialiased'>
+			<body className='min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased'>
 				{children}
 			</body>
 		</html>
