@@ -1,27 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import {
-	Rocket,
-	Bot,
-	Paintbrush,
-	Search,
-	Laptop,
-	Zap,
-	Shield,
-	LineChart,
-	ArrowRight,
-	CheckCircle2,
-} from 'lucide-react';
 import Navbar from '@/components/Navbar';
-import Badge from '@/components/ui/Badge';
-import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Input } from '@/components/ui/Input';
-import { Textarea } from '@/components/ui/Textarea';
-import { h2, li, p, section, span } from 'framer-motion/client';
-
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
 import Process from '@/components/sections/Process';
