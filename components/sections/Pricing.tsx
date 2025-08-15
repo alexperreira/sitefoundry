@@ -2,6 +2,7 @@ import React from 'react';
 import Section from '@/components/sections/Section';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { CheckCircle2 } from 'lucide-react';
 
 const plans = [
 	{

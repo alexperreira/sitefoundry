@@ -22,8 +22,6 @@ import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
 import { h2, li, p, section, span } from 'framer-motion/client';
 
-
-
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
 import Process from '@/components/sections/Process';
@@ -31,6 +29,7 @@ import Features from '@/components/sections/Features';
 import Work from '@/components/sections/Work';
 import Pricing from '@/components/sections/Pricing';
 import FAQ from '@/components/sections/FAQ';
+import Contact from '@/components/sections/Contact';
 
 export default function Page() {
 	return (
