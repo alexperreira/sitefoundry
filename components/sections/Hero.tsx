@@ -18,8 +18,8 @@ export default function Hero() {
 	return (
 		<section id='home' className='relative overflow-hidden'>
 			<div className='absolute inset-0 -z-10'>
-				<div className='absolute -top-40 right-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-500/10 blur-3xl' />
-				<div className='absolute -bottom-40 left-[-10%] w-[600px] h-[600px] rounded-full bg-emerald-400/10 blur-3xl' />
+				<div className='absolute -top-40 right-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-500/15 blur-3xl' />
+				<div className='absolute -bottom-60 left-[-10%] w-[600px] h-[600px] rounded-full bg-emerald-400/15 blur-3xl' />
 			</div>
 			<div className='container mx-auto px-6 max-w-7xl py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center'>
 				<div>

@@ -49,6 +49,7 @@ const plans = [
 export default function Pricing() {
 	return (
 		<Section
+			flip
 			id='pricing'
 			eyebrow='Simple plans'
 			title='Start small, grow fast'

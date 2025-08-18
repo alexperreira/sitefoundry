@@ -36,6 +36,7 @@ const features = [
 export default function Features() {
 	return (
 		<Section
+			flip
 			id='features'
 			eyebrow='AI, responsibly'
 			title='Agents with guardrails, not gimmicks'

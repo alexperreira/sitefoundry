@@ -1,19 +1,43 @@
+import { div } from 'framer-motion/client';
+import React from 'react';
+
+type SectionProps = {
+	id?: string;
+	eyebrow?: string;
+	title?: React.ReactNode;
+	subtitle?: React.ReactNode;
+	children?: React.ReactNode;
+	orbs?: boolean;
+	flip?: boolean;
+};
+
 export default function Section({
 	id,
 	eyebrow,
 	title,
 	subtitle,
 	children,
-}: {
-	id?: string;
-	eyebrow?: string;
-	title?: React.ReactNode;
-	subtitle?: React.ReactNode;
-	children?: React.ReactNode;
-}) {
+	orbs = true,
+	flip = false,
+}: SectionProps) {
 	return (
-		<section id={id} className='relative py-20 md:py-28'>
-			<div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/5 pointer-events-none' />
+		<section id={id} className='relative py-20 md:py-28 overflow-hidden'>
+			{orbs && (
+				<div className='absolute inset-0 -z-10 pointer-events-none'>
+					{flip ? (
+						<>
+							<div className='absolute -top-60 left-[-10%] w-[600px] h-[600px] rounded-full bg-emerald-400/15 blur-3xl' />
+							<div className='absolute -bottom-60 -right-[10%] w-[600px] h-[600px] rounded-full bg-indigo-500/15 blur-3xl' />
+						</>
+					) : (
+						<>
+							<div className='absolute -top-60 right-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-500/15 blur-3xl' />
+							<div className='absolute -bottom-60 left-[-10%] w-[600px] h-[600px] rounded-full bg-emerald-400/15 blur-3xl' />
+						</>
+					)}
+				</div>
+			)}
+
 			<div className='container mx-auto px-6 max-w-7xl'>
 				<div className='mb-10 md:mb-14 text-center'>
 					{eyebrow && (

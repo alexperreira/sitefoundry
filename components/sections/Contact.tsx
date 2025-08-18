@@ -9,6 +9,7 @@ import { CheckCircle2 } from 'lucide-react';
 export default function Contact() {
 	return (
 		<Section
+			flip
 			id='contact'
 			eyebrow="Let's talk"
 			title='Tell us about your goals'

@@ -33,6 +33,7 @@ const services = [
 export default function Services() {
 	return (
 		<Section
+			flip
 			id='services'
 			eyebrow='What we do'
 			title={
