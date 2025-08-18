@@ -2,7 +2,7 @@ import * as React from 'react';
 import clsx from 'clsx';
 import { cva, type VariantProps } from 'class-variance-authority';
 
-const cardVariants = cva('border bg-white', {
+const cardVariants = cva('border', {
 	variants: {
 		variant: {
 			default: 'border-zinc-200',

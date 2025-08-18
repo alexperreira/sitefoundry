@@ -13,10 +13,10 @@ import Contact from '@/components/sections/Contact';
 
 export default function Page() {
 	return (
-		<div className='min-h-screen bg-white text-zinc-900 dark:text-zinc-100'>
+		<div className='min-h-screen'>
 			<Navbar />
 			<Hero />
-			<div className='py-10 md:py-14 border-y border-zinc-100 bg-white/60 dark:bg-zinc-950/70 backdrop-blur'>
+			{/* <div className='py-10 md:py-14 border-y border-zinc-100 bg-white/60 dark:bg-zinc-950/70 backdrop-blur'>
 				<div className='container mx-auto px-6 max-w-7xl'>
 					<p className='text-center text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400'>
 						Trusted by growth-minded teams
@@ -30,7 +30,7 @@ export default function Page() {
 						))}
 					</div>
 				</div>
-			</div>
+			</div> */}
 			<Services />
 			<Process />
 			<Features />

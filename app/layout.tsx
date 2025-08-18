@@ -35,9 +35,10 @@ export default function RootLayout({
 			<head>
 				<script dangerouslySetInnerHTML={{ __html: themeInit }} />
 			</head>
-			<body className='min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased'>
+			{/* <body className='min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased'>
 				{children}
-			</body>
+			</body> */}
+			<body className='min-h-screen antialiased'>{children}</body>
 		</html>
 	);
 }
