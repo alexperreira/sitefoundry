@@ -32,14 +32,13 @@ export default function Hero() {
 						<span className='text-indigo-600'>Grow.</span>
 					</h1>
 					<p className='mt-5 text-lg text-zinc-600 dark:text-zinc-300 max-w-prose'>
-						SiteFoundry.ai blends custom development, thoughtful design, SEO,
-						and automation to forge growth engines. We deliver fast websites,
-						clean UX, and AI agents that work while you sleep.
+						We help small businesses attract more customers, boost online
+						visibility, and save hours each week with AI-powered automation.
 					</p>
 					<div className='mt-6 flex flex-col sm:flex-row gap-3'>
 						<a href='#pricing'>
 							<Button size='lg' className='rounded-2xl gap-2'>
-								Launch my project <ArrowRight className='w-4 h-4' />
+								Book a Free Strategy Call <ArrowRight className='w-4 h-4' />
 							</Button>
 						</a>
 						<a href='#work'>
@@ -71,12 +70,11 @@ export default function Hero() {
 							<CardHeader>
 								<CardTitle className='text-base flex items-center gap-2'>
 									<Search className='w-4 h-4' />
-									SEO Insights
+									Lead generation
 								</CardTitle>
 							</CardHeader>
 							<CardContent className='text-sm text-zinc-600 dark:text-zinc-300'>
-								Auto-audit pages, surface long-tail opportunities, and ship
-								fixes from one dashboard.
+								Our SEO services help new customers find you fast.
 							</CardContent>
 						</Card>
 						<Card className='rounded-3xl shadow-md'>
@@ -87,31 +85,31 @@ export default function Hero() {
 								</CardTitle>
 							</CardHeader>
 							<CardContent className='text-sm text-zinc-600 dark:text-zinc-300'>
-								Content, outreach, and reporting-scheduled or event-driven, with
-								human oversight.
+								We automate repeitive online tasks so you can focus on what you
+								do best.
 							</CardContent>
 						</Card>
 						<Card className='rounded-3xl shadow-md'>
 							<CardHeader>
 								<CardTitle className='text-base flex items-center gap-2'>
 									<Laptop className='w-4 h-4' />
-									Dev & DX
+									Lead conversion
 								</CardTitle>
 							</CardHeader>
 							<CardContent className='text-sm text-zinc-600 dark:text-zinc-300'>
-								Modern tech stacks, type-safe APIs, and hardened deployments.
+								We optimize your website to convert more visitors into paying
+								customers.
 							</CardContent>
 						</Card>
 						<Card className='rounded-3xl shadow-md'>
 							<CardHeader>
 								<CardTitle className='text-base flex items-center gap-2'>
 									<Paintbrush className='w-4 h-4' />
-									Design Systems
+									Choose your flavor
 								</CardTitle>
 							</CardHeader>
 							<CardContent className='text-sm text-zinc-600 dark:text-zinc-300'>
-								Component libraries, tokens, and brand kits for consistency and
-								speed.
+								Content, outreach, customer support, and more.
 							</CardContent>
 						</Card>
 					</div>
