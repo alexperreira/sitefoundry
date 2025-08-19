@@ -6,9 +6,14 @@ export default function Work() {
 	return (
 		<Section
 			id='work'
-			eyebrow='Selected work'
-			title='Outcomes over outputs'
-			subtitle='Here are representative project types and results. Swap in your case studies when ready.'
+			eyebrow='Our work'
+			title={
+				<>
+					Real businesses.
+					<span className='text-indigo-600'> Real results.</span>
+				</>
+			}
+			subtitle="Here's a look at the kind of transformations we deliver, and what you can expect when we work together."
 		>
 			<div className='grid md:grid-cols-3 gap-6'>
 				{[1, 2, 3].map((i) => (
