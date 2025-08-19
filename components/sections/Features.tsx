@@ -5,30 +5,39 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 
 const features = [
 	{
-		title: 'Content engine',
-		body: 'Research → draft → fact-check → publish with approvals and style checks.',
+		title: 'Marketing made easy',
+		body: 'From social media posts to blogs and email campaigns — created, scheduled, and published for you.',
 		bullets: [
-			'Briefs from keyword clusters',
-			'Schema & internal linking',
-			'Auto-A/B titles & CTAs',
+			'Social posts auto-scheduled',
+			'Blogs & newsletters drafted',
+			'Email campaigns automated',
 		],
 	},
 	{
-		title: 'Ops & CRM bots',
-		body: 'Connect forms, CRMs, help desks, and analytics to cut manual work.',
+		title: 'SEO that works',
+		body: 'Get found by more local customers with smart, ongoing improvements.',
 		bullets: [
-			'Lead enrichment & routing',
-			'Lifecycle emails & summaries',
-			'Weekly KPI snapshots',
+			'Keyword-driven content',
+			'Optimized titles & CTAs',
+			'Clear site structure & links',
 		],
 	},
 	{
-		title: 'Performance & security',
-		body: 'Core Web Vitals, access controls, and observability baked-in from day one.',
+		title: 'Time-saving automations',
+		body: 'Free up your team by connecting the tools use already use.',
 		bullets: [
-			'CSP/Headers & rate limits',
-			'Edge caching & image optimizations',
-			'Error tracking & SLOs',
+			'Customer inquiries routed automatically',
+			'CRM, forms & analytics connected',
+			'Weekly performance snapshots',
+		],
+	},
+	{
+		title: 'Performance & security built-in',
+		body: 'Your site runs fast, stays secure, and is always reliable.',
+		bullets: [
+			'Mobile speed optimization',
+			'Secure access & backups',
+			'Error monitoring & reporting',
 		],
 	},
 ] as const;
@@ -38,11 +47,16 @@ export default function Features() {
 		<Section
 			flip
 			id='features'
-			eyebrow='AI, responsibly'
-			title='Agents with guardrails, not gimmicks'
-			subtitle='Our automations are observable, reversible, and aligned to your KPIs—so you stay in control.'
+			eyebrow='AI with peace of mind'
+			title={
+				<>
+					Smarter online growth
+					<span className='text-indigo-600'> made simple</span>
+				</>
+			}
+			subtitle='Automation that saves you hours without losing control. Everything is transparent, safe, and built around your goals.'
 		>
-			<div className='grid lg:grid-cols-3 gap-6'>
+			<div className='grid lg:grid-cols-4 gap-6'>
 				{features.map((feat) => (
 					<Card key={feat.title} className='rounded-3xl'>
 						<CardHeader>

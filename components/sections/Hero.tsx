@@ -9,6 +9,9 @@ import {
 	Search,
 	Shield,
 	Zap,
+	BadgeDollarSign,
+	IceCreamCone,
+	TrendingUp,
 } from 'lucide-react';
 import Badge from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
@@ -69,7 +72,7 @@ export default function Hero() {
 						<Card className='rounded-3xl shadow-md'>
 							<CardHeader>
 								<CardTitle className='text-base flex items-center gap-2'>
-									<Search className='w-4 h-4' />
+									<TrendingUp className='w-4 h-4' />
 									Lead generation
 								</CardTitle>
 							</CardHeader>
@@ -92,7 +95,7 @@ export default function Hero() {
 						<Card className='rounded-3xl shadow-md'>
 							<CardHeader>
 								<CardTitle className='text-base flex items-center gap-2'>
-									<Laptop className='w-4 h-4' />
+									<BadgeDollarSign className='w-4 h-4' />
 									Lead conversion
 								</CardTitle>
 							</CardHeader>
@@ -104,7 +107,7 @@ export default function Hero() {
 						<Card className='rounded-3xl shadow-md'>
 							<CardHeader>
 								<CardTitle className='text-base flex items-center gap-2'>
-									<Paintbrush className='w-4 h-4' />
+									<IceCreamCone className='w-4 h-4' />
 									Choose your flavor
 								</CardTitle>
 							</CardHeader>

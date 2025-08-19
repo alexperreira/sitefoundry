@@ -51,7 +51,7 @@ export default function Section({
 						</h2>
 					)}
 					{subtitle && (
-						<p className='mt-4 text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto'>
+						<p className='mt-4 text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto text-md'>
 							{subtitle}
 						</p>
 					)}
