@@ -35,8 +35,8 @@ export default function Hero() {
 						<span className='text-indigo-600'>Grow.</span>
 					</h1>
 					<p className='mt-5 text-lg text-zinc-600 dark:text-zinc-300 max-w-prose'>
-						We help small businesses attract more customers, boost online
-						visibility, and save hours each week with AI-powered automation.
+						Websites, SEO, and automation — everything you need to grow with
+						less stress.
 					</p>
 					<div className='mt-6 flex flex-col sm:flex-row gap-3'>
 						<a href='#pricing'>

@@ -6,43 +6,47 @@ import { CheckCircle2 } from 'lucide-react';
 
 const plans = [
 	{
-		name: 'Launch',
-		price: '$2,500',
-		cadence: '/project',
+		name: 'Starter',
+		price: '$300',
+		cadence: '/month',
 		highlight: false,
-		blurb: 'Best for new sites or single-page launches.',
+		blurb: 'Best for small busineses getting their online presence right.',
 		features: [
-			'1-page site or landing page',
-			'Brand kit & basic components',
-			'Technical SEO setup',
-			'Analytics + consent setup',
+			'Website: 1-page site or landing page (built + maintained)',
+			'SEO: Local SEO setup (Google Business profile, keywords, on-page optimization)',
+			'AI Automation: Simple automation (auto-reply to contact form leads, weekly KPI email)',
+			'Support: Monthly site checkup + updates)',
 		],
+		action: 'Get started with',
 	},
 	{
 		name: 'Growth',
-		price: '$3,500',
+		price: '$600',
 		cadence: '/month',
 		highlight: true,
-		blurb: 'Most popular: continuous improvements + content.',
+		blurb:
+			'For growing businesses that need consistent traffic and time-saving tools.',
 		features: [
-			'Ongoing SEO & A/B tests',
-			'Monthly content agent (4 posts)',
-			'Performance & security care',
-			'Quarterly roadmap & reporting',
+			'Website: Multi-page (5-7) site or online store with monthly updates',
+			'SEO: Ongoing improvements (keyword research, content creation, link building)',
+			'AI Automation: Advanced automation (email campaigns, follow-ups, lead scoring, AI-powered content)',
+			'Support: Monthly strategy call + performance reporting',
 		],
+		action: 'Choose',
 	},
 	{
-		name: 'Scale',
-		price: 'Custom',
-		cadence: '',
+		name: 'Pro',
+		price: '$1,200',
+		cadence: '/month',
 		highlight: false,
-		blurb: 'For complex apps, multi-brand, or enterprise.',
+		blurb: 'For businesses ready to automate and expand.',
 		features: [
-			'Custom web app / integrations',
-			'Ops & CRM automations',
-			'SLAs & dedicated support',
-			'Compliance & SSO options',
+			'Website: Full-featured site or online store + priority updates',
+			'SEO: Advanced (content clusters, backlinks, A/B testing for conversions)',
+			'AI Automation: CRM integration, customer lifecycle automations (reminders, emails, summaries), advanced analytics',
+			'Support: Dedicated support + quarterly growth roadmap',
 		],
+		action: 'Upgrade to',
 	},
 ] as const;
 
@@ -52,15 +56,19 @@ export default function Pricing() {
 			flip
 			id='pricing'
 			eyebrow='Simple plans'
-			title='Start small, grow fast'
-			subtitle='Clear pricing with room to scale as results compound.'
+			title={
+				<>
+					Start small, <span className='text-indigo-600'> grow with us</span>
+				</>
+			}
+			subtitle='Simple, affordable pricing for every stage of your business.'
 		>
 			<div className='grid md:grid-cols-3 gap-6'>
 				{plans.map((p) => (
 					<Card
 						key={p.name}
-						className={`rounded-3xl h-full ${
-							p.highlight ? 'border-indigo-500 shadow-lg' : ''
+						className={`shadow-lg rounded-3xl h-full ${
+							p.highlight ? 'scale-105 ring-2 ring-indigo-600' : ''
 						}`}
 					>
 						<CardHeader>
@@ -88,7 +96,7 @@ export default function Pricing() {
 							</ul>
 							<a href='#contact'>
 								<Button className='w-full mt-4 rounded-2xl'>
-									Choose {p.name}
+									{p.action} {p.name}
 								</Button>
 							</a>
 						</CardContent>
