@@ -1,14 +1,16 @@
 import { cookies } from 'next/headers';
 import React from 'react';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/sections/Hero';
-import Services from '@/components/sections/Services';
-import Process from '@/components/sections/Process';
-import Features from '@/components/sections/Features';
-import Work from '@/components/sections/Work';
-import Pricing from '@/components/sections/Pricing';
-import FAQ from '@/components/sections/FAQ';
-import Contact from '@/components/sections/Contact';
+import {
+	Hero,
+	Services,
+	Process,
+	Features,
+	Work,
+	Pricing,
+	FAQ,
+	Contact,
+} from '@/components/sections';
 
 const SUBTITLES: Record<'a' | 'b', string> = {
 	a: 'Websites, SEO, and automation — everything you need to grow with less stress.',
