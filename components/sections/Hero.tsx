@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -16,8 +17,15 @@ import {
 import Badge from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { TrackableCTA } from '@/components/TrackableCTA';
 
-export default function Hero() {
+export default function Hero({
+	subtitle,
+	variant,
+}: {
+	subtitle: string;
+	variant: 'a' | 'b';
+}) {
 	return (
 		<section id='home' className='relative overflow-hidden'>
 			<div className='absolute inset-0 -z-10'>
@@ -35,14 +43,14 @@ export default function Hero() {
 						<span className='text-indigo-600'>Grow.</span>
 					</h1>
 					<p className='mt-5 text-lg text-zinc-600 dark:text-zinc-300 max-w-prose'>
-						Websites, SEO, and automation — everything you need to grow with
-						less stress.
+						{subtitle}
 					</p>
 					<div className='mt-6 flex flex-col sm:flex-row gap-3'>
 						<a href='#pricing'>
-							<Button size='lg' className='rounded-2xl gap-2'>
+							{/* <Button size='lg' className='rounded-2xl gap-2'>
 								Book a Free Strategy Call <ArrowRight className='w-4 h-4' />
-							</Button>
+							</Button> */}
+							<TrackableCTA variant={variant} />
 						</a>
 						<a href='#work'>
 							<Button size='lg' variant='outline' className='rounded-2xl'>

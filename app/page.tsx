@@ -1,5 +1,4 @@
-'use client';
-
+import { cookies } from 'next/headers';
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/sections/Hero';
@@ -11,26 +10,21 @@ import Pricing from '@/components/sections/Pricing';
 import FAQ from '@/components/sections/FAQ';
 import Contact from '@/components/sections/Contact';
 
+const SUBTITLES: Record<'a' | 'b', string> = {
+	a: 'Websites, SEO, and automation — everything you need to grow with less stress.',
+	b: 'More customers. Less busywork. Smarter growth for your business.',
+};
+
 export default function Page() {
+	const cookieStore = cookies();
+
+	const variant =
+		(cookieStore.get('exp_hero_headline')?.value as 'a' | 'b') ?? 'a';
+	const subtitle = SUBTITLES[variant];
 	return (
 		<div className='min-h-screen'>
 			<Navbar />
-			<Hero />
-			{/* <div className='py-10 md:py-14 border-y border-zinc-100 bg-white/60 dark:bg-zinc-950/70 backdrop-blur'>
-				<div className='container mx-auto px-6 max-w-7xl'>
-					<p className='text-center text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400'>
-						Trusted by growth-minded teams
-					</p>
-					<div className='mt-6 grid grid-cols-2 md:grid-cols-5 gap-8 place-items-center opacity-70'>
-						{'ABCDE'.split('').map((_, i) => (
-							<div
-								key={i}
-								className='h-8 w-28 rounded-md bg-zinc-200 dark:bg-zinc-800'
-							/>
-						))}
-					</div>
-				</div>
-			</div> */}
+			<Hero subtitle={subtitle} variant={variant} />
 			<Services />
 			<Process />
 			<Features />
